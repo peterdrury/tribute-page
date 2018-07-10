@@ -1,0 +1,27 @@
+body{
+	background: url(background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+main{
+	text-align: center;
+}
+#title{
+	height: 100px;
+	width: auto;
+	margin: 40px 40px 20px 40px;
+	padding: 20px 0 20px 0px;
+	background-color: #EEE;
+	color:#333;
+}
+
+#img-div{
+	margin: 40px 40px 20px 40px;
+	padding: 20px 0 20px 0px;
+	background-color: #EEE;
+	color:#333;
+}
+

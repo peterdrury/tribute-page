@@ -1,0 +1,176 @@
+body {
+
+}
+
+main {
+    text-align: center;
+}
+
+
+
+#title {
+    display: block;
+    justify-content: center;
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+}
+
+#title #heading {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#title #dates {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#title p {
+    font-family: sans-serif;
+}
+
+#img-div {
+    display: block;
+    position: relative;
+    justify-content: center;
+    background-color: #EEE;
+    color: #333;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    margin-top: 20px;
+    height: auto;
+}
+
+.image-credit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    font-size: 1.1vw;
+}
+
+.hide {
+    display: none;
+}
+
+#tribute-info p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#tribute-info li {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+}
+
+#tribute-info {
+    text-align: left;
+}
+
+#link-text {
+	margin-bottom: 30px;
+    display: block;
+    text-align: center;
+    font-size: 1.25em
+}
+
+@media only screen and (min-width: 1281px) {
+    .styling {
+        display: block;
+        margin: 0px 200px 0px 200px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .styling {
+        display: block;
+        margin: 0px 200px 0px 200px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 1225px) and (max-width: 1024px) {
+    .styling {
+        display: block;
+        margin: 0px 200px 0px 200px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .styling {
+        display: block;
+        margin: 0px 150px 0px 150px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+        font-size: 80%;
+        margin: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .styling {
+        display: block;
+        margin: 0px 100px 0px 100px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .styling {
+        display: block;
+        margin: 0px 50px 0px 50px;
+        padding: 20px 10px 20px 10px;
+        background-color: #EEE;
+        color: #333;
+        border-radius: 3px;
+    }
+    article,
+    #image-credit {
+        font-size: 75%;
+    }
+}

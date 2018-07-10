@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!-- saved from url=(0120)file:///media/pete/WEB%20DEV/FreeCodeCamp/Responsive%20Web%20Design%20Certification%20Projects/Tribute%20Page/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>A Tribute to Professor Stephen Hawking</title>
+	<link rel="stylesheet" type="text/css" href="./A Tribute to Professor Stephen Hawking_files/main.css">
+<style type="text/css">#fcc_foldout_menu_inner {
+  height: 0px;
+  position: relative;
+  background-color: transparent;
+}
+
+#fcc_foldout_menu_inner label {
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  color: black;
+  cursor: default;
+  font-size: 15px;
+  height: 20px;
+  left: 20px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 38px;
+  width: fit-content;
+  z-index: 0;
+}
+
+#fcc_foldout_menu_inner select {
+  background-color: buttonface;
+  border: 1px solid;
+  border-color: rgb(169, 169, 169);
+  border-radius: 0px;
+  box-shadow: none;
+  color: black;
+  display: inherit;
+  font-size: 12px;
+  height: auto;
+  left: 18px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 61px;
+  width: auto;
+}
+
+button.fcc_foldout_buttons {
+  background-color: rgba(128, 128, 128, 0.7);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px black;
+  box-sizing: content-box;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  height: 20px;
+  left: 20px;
+  margin: 0px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 110px;
+  z-index: 0;
+}
+
+#fcc_test_message-box-rerun-button {
+  top: 90px;
+  transition: all .3s;
+}
+
+#fcc_test_message-box-rerun-button:hover {
+  color: white;
+  background-color: black;
+}
+
+#fcc_test_button {
+  top: 140px;
+}
+
+button.fcc_test_btn-default {
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+button.fcc_test_btn-executing {
+  background-color: rgba(255, 153, 0, 0.9);
+}
+
+button.fcc_test_btn-error {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+button.fcc_test_btn-success {
+  background-color: rgba(81, 211, 81, 0.9);
+}
+
+#fcc_report-bug {
+  position: absolute;
+  top: 186px;
+  left: 20px;
+  width: 110px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-align: center;
+  height: auto;
+  box-shadow: none;
+}
+
+#fcc_legend_wrapper {
+  position: absolute;
+  top: 95px;
+  left: 160px;
+  width: 125px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 15px;
+  background: none;
+  box-shadow: none;
+  height: auto;
+}
+
+#fcc_legend_wrapper span {
+  height: 15px;
+  margin-top: 6px;
+  font-size: 12px ;
+  color: black;
+  background: none;
+}
+
+div.fcc_legend.key {
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+div.fcc_legend.key:first-of-type {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+div.fcc_legend.key:nth-of-type(2) {
+  background-color: rgba(81, 211, 81, 0.9);
+}
+
+div.fcc_legend.key:nth-of-type(3) {
+  background-color: rgba(255, 153, 0, 0.9);
+}
+
+div.fcc_legend, span.fcc_legend {
+  position: relative;
+  display: inline-block;
+  left: 0px;
+}
+
+/* This acts as sort of CSS reset. The div that will use this class is a 
+   wrapper div for the entire test UI. By using this class we ensure that
+   Camper code will be less specific and therefor won't override properties
+   that could change the layout or styling of our test UI.
+*/
+div.fcc_test_ui {
+  align-items: normal;  
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: black;
+  cursor: default;
+  display: block;
+  font-family: Noto Sans, arial, sans-serif;
+  font-size: 100%;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0;
+  letter-spacing: normal;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  pointer-events: all;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: none;
+  vertical-align: baseline;
+  word-spacing: 0px;  
+}
+
+/* Ensures that all child elements of the test UI wrapper div will have these
+   properties specified so Camper CSS won't override these properties.
+*/
+.fcc_test_ui * {
+  align-items: inherit;  
+  background: inherit;
+  background-color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+  color: inherit;
+  cursor: inherit;
+/*  display: inherit; */
+  font-family: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant-caps: inherit;
+  font-weight: inherit;
+  height: inherit;
+  left: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: inherit;
+  outline: inherit;
+  padding: inherit;
+  pointer-events: inherit;
+  position: inherit;
+  text-align: inherit;
+  transform: inherit;
+  vertical-align: inherit;
+  word-spacing: inherit;  
+}
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Noto+Sans);</style><style type="text/css">/* Please note making changes to the styles here might make some of the project
+tests no longer work, or even just give a false positive. Especially if you
+change a selector name.
+The project tests generally try to filter out any CSS selectors that
+contain 'fcc_test', or that contain 'mocha'. So please make sure the
+selectors here use that naming convention.
+See the following project tests which rely on filtering out the CSS rules
+used here. If you find other project tests that rely on the CSS here,
+please add them to the list:
+- styleSheetUtils.js
+- product-landing-page-tests.js
+*/
+
+#mocha .test .html-error,#mocha .test pre{
+  float:left;
+  clear:left;
+  word-wrap:break-word;
+}
+#mocha ul,#mocha-stats li{
+  list-style:none;
+}
+
+#mocha h1,#mocha h2{
+  margin:0;
+}
+
+div#mocha{
+  font:20px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin:60px 50px;
+}
+
+#mocha li {
+  display: list-item;
+}
+
+#mocha li,#mocha ul{
+  margin:0;
+  padding:0;
+}
+#mocha .suite,#mocha .test{
+  margin-left:15px;
+}
+#mocha h1{
+  margin-top:15px;
+  font-size:1em;
+  font-weight:200;
+}
+#mocha h1 a{
+  text-decoration:none;
+  color:inherit;
+}
+#mocha h1 a:hover{
+  text-decoration:underline;
+}
+#mocha .suite .suite h1{
+  margin-top:0;
+  font-size:.8em;
+}
+#mocha .hidden{
+  display:none;
+}
+#mocha h2{
+  font-size:12px;
+  font-weight:400;
+  cursor:pointer;
+}
+#mocha .test{
+  overflow:hidden;
+  background-color: unset;
+}
+#mocha .test.pending:hover h2::after{
+  content:'(pending)';
+  font-family:arial,sans-serif;
+}
+#mocha .test.pass.medium .duration{
+  background:#c09853;
+}
+#mocha .test.pass.slow .duration{
+  background:#b94a48;
+}
+#mocha .test.pass::before{
+  content:'\2713';
+  font-size:12px;
+  display:block;
+  float:left;
+  margin-right:5px;
+  color:#00d6b2;
+}
+#mocha .test.pass .duration{
+  font-size:9px;
+  margin-left:5px;
+  padding:2px 5px;
+  color:#fff;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.2);
+  -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.2);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.2);
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+}
+#mocha .test.pass.fast .duration{
+  display:none;
+}
+#mocha .test.pending{
+  color:#0b97c4;
+}
+#mocha .test.pending::before{
+  content:'\25E6';
+  color:#0b97c4;
+}
+#mocha .test.fail{
+  color:#c00;
+}
+#mocha .test.fail pre{
+  color:#000;
+}
+#mocha .test.fail::before{
+  content:'\2716';
+  font-size:12px;
+  display:block;
+  float:left;
+  margin-right:5px;
+  color:#c00;
+}
+#mocha .test pre.error{
+  color:#c00;
+  max-height:300px;
+  overflow:auto;
+}
+#mocha .test .html-error{
+  overflow:auto;
+  color:#000;
+  line-height:1.5;
+  display:block;
+  font:12px/1.5 monaco,monospace;
+  margin:5px;
+  padding:15px;
+  border:1px solid #eee;
+  max-width:85%;
+  max-width:-webkit-calc(100% - 42px);
+  max-width:-moz-calc(100% - 42px);
+  max-width:calc(100% - 42px);
+  max-height:300px;
+  border-bottom-color:#ddd;
+  -webkit-box-shadow:0 1px 3px #eee;
+  -moz-box-shadow:0 1px 3px #eee;
+  box-shadow:0 1px 3px #eee;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+#mocha .test .html-error pre.error{
+  border:none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+  -webkit-box-shadow:0;
+  -moz-box-shadow:0;
+  box-shadow:0; 
+  padding:0; 
+  margin:18px 0 0;
+  max-height:none;
+}
+#mocha .test pre{
+  display:block;
+  font:12px/1.5 monaco,monospace;
+  margin:5px;
+  padding:15px;
+  border:1px solid #eee;
+  max-width:85%;
+  max-width:-webkit-calc(100% - 42px);
+  max-width:-moz-calc(100% - 42px);
+  max-width:calc(100% - 42px);
+  border-bottom-color:#ddd;
+  -webkit-box-shadow:0 1px 3px #eee;
+  -moz-box-shadow:0 1px 3px #eee;
+  box-shadow:0 1px 3px #eee;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+#mocha .test h2{
+  position:relative;
+  display: block;
+}
+#mocha .test a.replay{
+  display:none;
+}
+#mocha-report.fail .test.pass,#mocha-report.pass .test.fail,#mocha-report.pending .test.fail,#mocha-report.pending .test.pass{
+  display:none;
+}
+#mocha-report.pending .test.pass.pending{
+  display:block;
+}
+#mocha-error{
+  color:#c00;
+  font-size:1.5em;
+  font-weight:100;
+  letter-spacing:1px;
+}
+#mocha-stats{
+  position:fixed;
+  top:12px;
+  right:10px;
+  font-size:12px;
+  margin:0;
+  color:#888;
+  z-index:1;
+}
+#mocha-stats .progress{
+  float:right;
+  padding-top:0;
+  height:auto;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+  background-color:initial;
+}
+#mocha-stats em{
+  color:#000;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+#mocha-stats a{
+  text-decoration:none;
+  color:inherit;
+  padding: 0;
+  margin: 0;
+}
+#mocha-stats a:hover{
+  border-bottom:1px solid #eee;
+}
+#mocha-stats li{
+  display:inline-block;
+  margin:0 5px;
+  padding-top:11px;
+  position: unset;
+}
+#mocha-stats canvas{
+  width:40px;
+  height:40px;
+}
+#mocha code .comment{
+  color:#ddd;
+}
+#mocha code .init{
+  color:#2f6fad;
+}
+#mocha code .string{
+  color:#5890ad;
+}
+#mocha code .keyword{
+  color:#8a6343;
+}
+#mocha code .number{
+  color:#2f6fad;
+}
+@media screen and (max-device-width:480px){
+  #mocha{
+    margin:60px 0;
+  }
+  #mocha #stats{
+    position:absolute;
+  }
+}
+
+/* TEST/MESSAGE CENTER CSS */
+
+div#fcc_test_message-box {
+  font-size: 20px !important;
+  font-family: Noto Sans, arial, sans-serif !important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transition: all .5s;
+  z-index: 100000;
+  overflow: auto;
+}
+
+.fcc_test_message-box-hidden {
+  visibility: hidden;
+  opacity: 0;
+  top: -300px;
+}
+
+.fcc_test_message-box-shown {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+div.fcc_test_message-box-content {
+  position: relative;
+  color: black !important;
+  background-color: white !important;
+  top: 10vh;
+  width: 80%;
+  margin: 0 auto !important;
+  text-align: initial;
+  border-radius: 10px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.fcc_test_message-box-header,
+.fcc_test_message-box-footer{
+  position: relative;
+  flex: none;
+  box-sizing: border-box !important;
+  padding: 10px !important;
+  margin: 0;
+}
+
+.fcc_test_message-box-header {
+  border-bottom: 1px solid rgb(229,229,229);
+  height: 60px;
+}
+
+.fcc_test_message-box-header .title {
+  float: left;
+  font-size: 30px !important;
+  line-height: 40px !important;
+  margin-left: 10px !important;
+  padding: 0;
+  height: auto;
+  border: unset;
+}
+
+div.fcc_test_message-box-body {
+  flex: 1;
+  position: static;
+}
+
+.fcc_test_message-box-footer {
+  border-top: 1px solid rgb(229,229,229);
+  height: 70px;
+}
+
+.fcc_test_message-box-close-btn {
+  float: right;
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(229,229,229);
+  border-radius: 4px;
+  padding: 10px 20px !important;
+  margin-bottom: 10px;
+  transition: all .3s;
+  line-height: 30px;
+  height: auto;
+}
+.fcc_test_message-box-close-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+div#mocha {
+  margin: 10px !important;
+  position: static;
+}
+
+#mocha .test pre {
+  background-color: rgb(245, 245, 245) !important;
+}
+
+#mocha-stats {
+  position: absolute;
+  left: unset;
+}
+
+#mocha ul {
+  max-width: initial;
+  margin: initial !important;
+  text-align: initial;
+}
+#mocha * {
+  font-family: Noto Sans, arial, sans-serif !important;
+  border: none !important;
+}
+
+div {
+  position: static;
+}
+
+</style><style type="text/css">#fcc_foldout_menu {
+  background-color: rgba(255, 255, 204, 0.9);
+  border: 0px solid #fff;
+  border-radius: 0px 0px 5px 0px;
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+  font-family: Noto Sans, arial, sans-serif;
+  height: 210px;
+  left: 0;
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  transition: .5s;
+  width: 320px;
+  z-index: 99997;
+}
+
+#fcc_toggle:checked ~ #fcc_foldout_menu {
+  left: -330px;
+  transition: .5s ease-in-out;
+}
+
+#fcc_toggle:checked ~ #fcc_test_suite_indicator_wrapper {
+  display: none;
+}
+
+#fcc_toggle {
+  height: 24px;
+  width: 25px;
+  position: fixed;
+  top: 7px;
+  left: 20px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+#fcc_foldout_toggler {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  z-index: 99998;
+  pointer-events: auto;
+}
+
+#fcc_foldout_toggler_background {
+  width: 39px;
+  height: 30px;
+  background-color: rgba(255, 255, 204, 0.08);
+  transform-origin: 0% 50%;
+  position: absolute;
+  top: -13px;
+  left: -7px;
+  z-index: -1;
+}
+
+.transform_top {
+  opacity: 1;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.transform_middle {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.transform_bottom {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+
+.fcc_hamburger {
+  position: relative;
+  width: 25px;
+  height: 4px;
+  display: block;
+  background: darkgreen !important;
+  border-radius: 5px !important;
+  transform-origin: 4px 0px;
+  transition: transform 0.4s ease, opacity 0.55s ease;
+  left: unset;
+}
+
+#hamburger_top {
+  position: absolute;
+  top: -7.5px;
+  transform-origin: 0% 50%;
+}
+
+#hamburger_middle {
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+}
+
+#hamburger_bottom {
+  position: absolute;
+  bottom: -7.5px;
+  transform-origin: 0 50%;
+}
+
+#fcc_test_suite_indicator_wrapper {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  left: unset;
+  height: auto;
+}
+
+#fcc_test_suite_indicator {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 204, 0.9);
+  color: black;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+  font-family: Noto Sans, arial, sans-serif;
+}
+</style><script src="./A Tribute to Professor Stephen Hawking_files/mocha.min.js"></script></head>
+<body>
+	<!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
+	<main id="main">
+
+		<!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
+		<div id="title">
+			<h1>A Tribute to Professor Stephen Hawking</h1>
+			<h4>"We should seek the gratest value of our action." - Stephen Hawking</h4>
+		</div>
+		<!-- User Story #3: I should see a div element with a corresponding id="img-div". -->
+		<div id="img-div">
+			<!-- User Story #4: Within the img-div element, I should see an img element with a corresponding id="image". -->
+			<img id="image" src="./A Tribute to Professor Stephen Hawking_files/stephen-hawking.jpg" alt="Professor Stephen Hawking">
+			<span class="off-screen">Image copyright</span>
+            <span class="story-image-copyright">André Pattenden</span>
+			<!-- User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. -->
+			<div id="img-caption">
+				<p>Description of image goes here</p>
+			</div>
+		</div>
+		<!-- User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page. -->
+		<div id="tribute-info">
+			<p>Tribute info here</p>
+		</div>
+		<!-- User Story #7: I should see an a element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab (i.e. target="_blank").  -->
+		<div>
+			Additional Info Here <a id="tribute-link" href="file:///media/pete/WEB%20DEV/FreeCodeCamp/Responsive%20Web%20Design%20Certification%20Projects/Tribute%20Page/index.html" target="blank"></a> and Here.
+		</div>
+	</main>
+	<script type="text/javascript" src="./A Tribute to Professor Stephen Hawking_files/bundle.js"></script>
+
+
+
+<!-- 
+Responsive Web Design Projects - Build a Tribute Page
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/zNqgVx.
+Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
+You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+
+
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js. --><div class="fcc_test_ui"><div id="fcc_foldout_toggler">
+  <span id="hamburger_top" class="fcc_hamburger"></span>
+  <span id="hamburger_middle" class="fcc_hamburger"></span>
+  <span id="hamburger_bottom" class="fcc_hamburger"></span>
+  <span id="fcc_foldout_toggler_background"></span>
+</div>
+<input id="fcc_toggle" onclick="FCC_Global.hamburgerTransform()" type="checkbox" title="CTRL + SHIFT + O">
+<div id="fcc_test_suite_indicator_wrapper"><span id="fcc_test_suite_indicator">FCC Test Suite: Tribute Page</span></div><div id="fcc_foldout_menu"><div id="fcc_foldout_menu_inner">
+  <label for="test-suite-selector">Select Test Suite: </label>
+  <select name="Test Suite Selector" id="test-suite-selector" onchange="FCC_Global.selectProject(this.value)">
+    <option id="placeholder" value="">Tribute Page</option>
+    <option value="tribute-page">Tribute Page</option>
+    <option value="portfolio">Personal Portfolio</option>
+    <option value="survey-form">Survey Form</option>
+    <option value="product-landing-page">Product Landing Page</option>
+    <option value="technical-docs-page">Technical Documentation Page
+    </option>
+    <option value="random-quote-machine">Random Quote Machine</option>
+    <option value="markdown-previewer">Markdown Previewer</option>
+    <option value="drum-machine">Drum Machine</option>
+    <option value="pomodoro-clock">Pomodoro Clock</option>
+    <option value="javascript-calculator">Javascript Calculator</option>
+    <option value="bar-chart">D3: Bar Chart</option>
+    <option value="scatter-plot">D3: Scatter Plot</option>
+    <option value="heat-map">D3: Heat Map</option>
+    <option value="choropleth">D3: Choropleth</option>
+    <option value="tree-map">D3: Tree Map</option>
+  </select>
+  <button id="fcc_test_message-box-rerun-button" type="button" class="fcc_foldout_buttons" title="CTRL + SHIFT + ENTER" onclick="FCC_Global.FCCRerunTests()">
+    Run Tests
+  </button>
+  <button id="fcc_test_button" type="button" class="fcc_foldout_buttons fcc_test_btn-default" title="CTRL + SHIFT + T" onclick="FCC_Global.FCCOpenTestModal()">
+    Tests
+  </button>
+  <div id="fcc_legend_wrapper">
+    <div class="fcc_legend key"></div>
+    <span class="fcc_legend">Test(s) Failed</span>
+    <div class="fcc_legend key"></div>
+    <span class="fcc_legend">Tests Passed</span>
+    <div class="fcc_legend key"></div>
+    <span class="fcc_legend">Tests Executing</span>
+  </div>
+  <span id="fcc_report-bug"><a href="https://github.com/freeCodeCamp/testable-projects-fcc/issues/new" target="_blank">Report Bug</a>
+  </span>
+</div>
+
+</div></div><div class="fcc_test_ui"><div id="fcc_test_message-box" class="fcc_test_message-box-hidden" onclick="FCC_Global.FCCclickOutsideToCloseModal(event)">
+  <div class="fcc_test_message-box-content">
+    <div class="fcc_test_message-box-header">
+      <div class="title">Unit tests</div>
+    </div>
+    <div class="fcc_test_message-box-body">
+      <div id="mocha">Run Test Suite to See Unit Tests!</div>
+    </div>
+    <div class="fcc_test_message-box-footer">
+      <div class="fcc_test_message-box-close-btn" onclick="FCC_Global.FCCCloseTestModal()">Close</div>
+    </div>
+  </div>
+</div></div></body></html>
